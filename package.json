@@ -1,0 +1,15 @@
+{
+  "name": "vivia-renderer-katex",
+  "version": "0.0.1",
+  "description": "vivia renderer katex",
+  "author": "Saurlax <saurlax@qq.com>",
+  "keywords": [
+    "vivia",
+    "renderer",
+    "katex"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "katex": "^0.16.7"
+  }
+}
