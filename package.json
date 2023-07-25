@@ -1,13 +1,16 @@
 {
-  "name": "vivia-renderer-katex",
+  "name": "vivia-katex",
   "version": "0.0.1",
   "description": "vivia renderer katex",
   "author": "Saurlax <saurlax@qq.com>",
   "keywords": [
     "vivia",
-    "renderer",
     "katex"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saurlax/vivia-katex.git"
+  },
   "license": "MIT",
   "dependencies": {
     "katex": "^0.16.7"
