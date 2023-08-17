@@ -1,8 +1,8 @@
 const katex = require('katex')
 
 module.exports = config => {
-  return ctx => {
-    ctx.content = ctx.content
+  return context => {
+    context.content = context.content
       .toString()
       .replace(/\$\$(.+?)\$\$/g, (_, math) =>
         katex.renderToString(math, { displayMode: true, throwOnError: false })
@@ -10,5 +10,7 @@ module.exports = config => {
       .replace(/\$(.+?)\$/g, (_, math) =>
         katex.renderToString(math, { displayMode: false, throwOnError: false })
       )
+    context.head +=
+      '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">'
   }
 }
