@@ -1,7 +1,7 @@
 {
   "name": "vivia-katex",
-  "version": "0.0.3",
-  "description": "vivia renderer katex",
+  "version": "0.0.4",
+  "description": "vivia katex",
   "author": "Saurlax <saurlax@qq.com>",
   "keywords": [
     "vivia",

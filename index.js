@@ -10,7 +10,8 @@ module.exports = config => {
       .replace(/\$(.+?)\$/g, (_, math) =>
         katex.renderToString(math, { displayMode: false, throwOnError: false })
       )
-    context.head +=
+    context.head =
+      (context.head ?? '') +
       '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">'
   }
 }
