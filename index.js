@@ -1,13 +1,16 @@
 const katex = require('katex')
 
 module.exports = config => {
+  const inlineReg = /\$([^$\n]+)\$/sg
+  const blockReg = /\$\$([^$]+)\$\$/g
+
   return context => {
     context.content = context.content
       .toString()
-      .replace(/\$\$(.+?)\$\$/g, (_, math) =>
+      .replace(blockReg, (_, math) =>
         katex.renderToString(math, { displayMode: true, throwOnError: false })
       )
-      .replace(/\$(.+?)\$/g, (_, math) =>
+      .replace(inlineReg, (_, math) =>
         katex.renderToString(math, { displayMode: false, throwOnError: false })
       )
     context.head =
